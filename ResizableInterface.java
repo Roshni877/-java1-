@@ -17,19 +17,21 @@ class Rectangle implements Resizable{
 		this.height=height;
 	}
 	public void display() {
-		System.out.println(width + "," + height);
-	}
-}
+		System.out.println("Rectangle Width: "+width);
+		System.out.println("Rectangle Height: "+height);}} 
 public class ResizableInterface{
 
 	public static void main(String[] args) {
-		System.out.println("Resizable");
-		Rectangle r1=new Rectangle(5,10);
-		r1.display();
+		String title0="Lab 7 program - Resizable Interface";
+		String title1="Develop a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized.";
+		String title2="Create a class Rectangle that implements the Resizable interface and implements the resize methods.";
+		System.out.println(title0+"\n"+title1+"\n"+title2);
+		Rectangle r1=new Rectangle(5,10);		
+		System.out.println("\nOriginal Rectangle: ");
+		r1.display();				
+		
 		r1.resizeWidth(8);
 		r1.resizeHeight(12);
-		r1.display();
+		System.out.println("\nResized Rectangle: ");
+		r1.display();}}	
 
-	}
-
-}
