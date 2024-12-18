@@ -11,7 +11,11 @@ class Outer{
 }
 public class OuterInnerClass {
 	public static void main(String[] args) {
-		System.out.println("Outer Inner");
+		String title0="Lab 8 program - Nested Class";
+		String title1="Develop a Java program to create an outer class with a function display.";
+		String title2="Create another class inside the outer class named inner with a function called display";
+		String title3="Call the two functions in the main class";
+		System.out.println(title0+"\n"+title1+"\n"+title2+"\n"+title3+"\n");
 		Outer o1 = new Outer();
 		o1.display();
 		Outer.Inner i1 = o1.new Inner();
