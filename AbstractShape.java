@@ -17,14 +17,31 @@ class Circle1 extends Shape1{
 		return 2*Math.PI*radius;
 	}
 }
+class Triangle1 extends shape1{
+	private double side1,side2,side3;
+	public Triangle (double side1,double side2, double side3){
+		this.side1=side1;
+		this.side2=side2;
+		this.side3=side3;}
+	@Override
+		double calculateArea(){
+			double s=(side1+side2+side3)/2;
+			return Math.sqrt(s*(s-side1)*(s-side2)*(s-side3));}
+	@Override
+		double calculatePerimeter(){
+			return side1+side2+side3;}}
+		
 public class AbstractShape {
 
 	public static void main(String[] args) {
-		System.out.println("Abstract Shapes");
-		Circle1 c1=new Circle1(5.0);
-		System.out.println(c1.calculateArea());
-		System.out.println(c1.calculatePerimeter());
-		
+		Circle1 circle1=new Circle1(5);
+		System.out.println("Area and circumference of circle are ");
+		System.out.println(circle1.calculateArea());
+		System.out.println(circle1.calculatePerimeter());
+		Triangle1 triangle1=new Triangle1(5);
+		System.out.println("Area and perimeter of triangle are ");
+		System.out.println(triangle1.calculateArea());
+		System.out.println(triangle1.calculatePerimeter());
 
 	}
 
